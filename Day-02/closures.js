@@ -1,0 +1,15 @@
+// Closure Counter Example
+// Demonstrates how inner function remembers outer scope variables
+
+function createCounter() {
+  let count = 0;
+
+  return function () {
+    count++;
+    return count;
+  };
+}
+
+const counter = createCounter();
+console.log(counter()); 
+console.log(counter()); 
